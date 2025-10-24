@@ -1,0 +1,45 @@
+body {background-color:gray;}
+
+.pagina {
+
+	background-color: 
+	position: relative;
+	width: 500px;
+	margin: 0 auto;
+	border: 1px;
+	height: auto;
+}
+
+.topo {
+  
+	width: 700px;
+	height: 530px;
+	background-color:;
+}
+
+.menu,.rodape {
+	width: 1700px;
+	height: 30px;
+	background-color:black;
+	}
+
+.menu_esq {width: 200px; height:500px;
+	background-color:black;
+	position: absolute;
+	top: 160px;
+	
+}
+.menu_dir{width: 200px; height:500px;
+	background-color:black;
+	position: absolute;
+	top: 160px;
+	left: 1400px;
+}	
+
+.conteudo{
+width: 600px;
+height: 500px;
+background-color:;
+position:absolute;
+top: 160px;
+left: 700px;	

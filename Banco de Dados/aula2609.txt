@@ -1,0 +1,32 @@
+CREATE TABLE tbGeneroFilme ( 
+    codGeneroFilme int PRIMARY KEY AUTO_INCREMENT,
+    generoFilme varchar(20)
+    );
+
+CREATE TABLE tbAtor ( 
+    codAtor int PRIMARY KEY AUTO_INCREMENT,
+    ator varchar(50)
+    );
+
+CREATE TABLE tbDiretorFilme ( 
+    codDiretorFilme int PRIMARY KEY AUTO_INCREMENT,
+    nomeDiretor varchar(50)
+    );
+
+
+CREATE TABLE tbFilme(
+    codFilme int PRIMARY KEY AUTO_INCREMENT,
+    filme varchar(50),
+    codGenero int NOT NULL,
+    codDiretor int NOT NULL,
+    FOREIGN KEY (codGenero) REFERENCES tbGeneroFilme (codGeneroFilme),
+    FOREIGN KEY (codDiretor) REFERENCES tbDiretorFilme (codDiretorFilme)
+);
+
+CREATE TABLE tbAtorFilme(
+	codAtorFilme int PRIMARY KEY AUTO_INCREMENT,
+    codAtor int NOT NULL,
+    codFilme int NOT NULL,
+    FOREIGN KEY (codAtor) REFERENCES tbAtor (codAtor),
+    FOREIGN KEY (codFilme) REFERENCES tbFilme (codFilme)
+);
